@@ -1,0 +1,36 @@
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.steps::after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 20px;
+}
+
+.steps .step {
+    width: 120px;
+    text-align: center;
+    z-index: 1;
+    background: #fff;
+}
+
+.step.active {
+    color: #7076f4;
+    font-weight: bold;
+}
+
+.step svg {
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+.active>svg {
+    fill: #7076f4;
+}
