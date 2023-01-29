@@ -54,9 +54,9 @@ export function ReviewForm({ data, updateFieldHandler }) {
                     <input
                         type="radio"
                         name="review"
-                        value="very-satisfied"
+                        value="very_satisfied"
                         onChange={e => updateFieldHandler("review", e.target.value)}
-                        checked={data.review === "very-satisfied"}
+                        checked={data.review === "very_satisfied"}
                         required
                     />
                     <BsFillEmojiHeartEyesFill />
