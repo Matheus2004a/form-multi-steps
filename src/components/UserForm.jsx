@@ -1,4 +1,4 @@
-export function UserForm() {
+export function UserForm({ data, updateFieldHandler }) {
     return (
         <>
             <fieldset className="form-control">
@@ -7,6 +7,8 @@ export function UserForm() {
                     type="text"
                     name="name"
                     id="name"
+                    value={data.name}
+                    onChange={e => updateFieldHandler("name", e.target.value)}
                     placeholder="Digite seu nome"
                     required
                 />
@@ -18,6 +20,8 @@ export function UserForm() {
                     type="email"
                     name="email"
                     id="email"
+                    value={data.email}
+                    onChange={e => updateFieldHandler("email", e.target.value)}
                     placeholder="Digite seu email"
                     required
                 />
